@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>for...loop example</title>
+  </head>
+  <body>
+    <form action="" name="selectForm">
+      <p>
+        <label for="musicTypes"
+          >Choose some music types, then click the button below:</label
+        >
+      </p>
+      <p>
+        <select name="musicTypes" id="musicTypes" multiple>
+          <option value="rock" selected>Rock</option>
+          <option value="indie">Indie</option>
+          <option value="jazz">Jazz</option>
+          <option value="blues">Blues</option>
+          <option value="reggae">Reggae</option>
+          <option value="funk">Funk</option>
+          <option value="hip-hop" selected>Hip Hop</option>
+          <option value="rnb">R &amp; B</option>
+          <option value="electronica">Electronica</option>
+          <option value="ambient">Ambient</option>
+          <option value="classical">Classical</option>
+          <option value="opera">Opera</option>
+        </select>
+      </p>
+      <p>
+        <input id="btn" type="button" value="How many are selected?" />
+      </p>
+    </form>
+
+    <script src="app.js"></script>
+  </body>
+</html>

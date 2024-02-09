@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     <title>Exercises</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <!-- ΑΣΚΗΣΗ 1 --> 
+    <article>
+      <form action="">
+        <input type="button" id="toggl" value="ON" style="color:blue" onclick="toggle(this);">
+    </form>
+    <article>
+    <hr>
+    
+    <!-- ΑΣΚΗΣΗ 2 -->
+    <h2 id="title">Πέρνα το ποντίκι από πάνω μου</h2>
+
+    <hr>
+    
+    <!-- ΑΣΚΗΣΗ 3 -->
+    <h3>Form: Exercise #3 </h3>
+      <form name="myMailform" method="post" action="#" onsubmit="return validateEmail();"> 
+      <label for="form3">Your email </label>
+      <input type="text" name="email">  
+      <input type="submit" value="register">  
+    </form>
+
+   <hr>
+
+    <!-- ΑΣΚΗΣΗ 4 -->
+    <div id="scroll">
+      -Τι περιμένουμε στην αγορά συναθροισμένοι;
+       Είναι οι βάρβαροι να φθάσουν σήμερα.
+          <br><br>
+      -Γιατί μέσα στην Σύγκλητο μιά τέτοια απραξία;
+       Τι κάθοντ' οι Συγκλητικοί και δεν νομοθετούνε;
+     -Γιατί οι βάρβαροι θα φθάσουν σήμερα.
+    </div>
+
+    <script>
+    //------------------------------
+    //ΑΣΚΗΣΗ # 1
+
+    function toggle(button)	{
+        if(document.getElementById("toggl").value=="OFF"){
+        document.getElementById("toggl").value="ON";} 
+        else if(document.getElementById("toggl").value=="ON"){
+        document.getElementById("toggl").value="OFF";}
+      }
+
+    //------------------------------
+    //ΑΣΚΗΣΗ # 2
+    var title = document.getElementById("title");
+    title.addEventListener("mouseover", mouseOver);
+    title.addEventListener("mouseout", mouseOut);
+
+    function mouseOver() {
+      title.style.color = "red";
+    }
+
+    function mouseOut() {
+      title.style.color = "black";
+    }
+
+     //------------------------------
+     // ΑΣΚΗΣΗ #3
+
+    function validateEmail()  {  
+      const dataInput = document.myMailform.email.value;  
+      const atPosition = dataInput.indexOf("@");  
+      const dotPosition = dataInput.lastIndexOf(".");  
+      if (atPosition < 2 || dotPosition < atPosition + 2 || dotPosition + 2 >= dataInput.length){  
+        alert("Please enter a valid e-mail address");  
+      return false;  
+      }  
+    }
+
+     //------------------------------
+     // ΑΣΚΗΣΗ #4
+
+    const scrollMe = document.querySelector('#scroll');
+    scrollMe.addEventListener('scroll', scrollAlert);
+
+    function scrollAlert() {
+      alert('Εκανες scroll στο ποίημα.');
+    }
+
+   </script>
+
+
+  
+  </body>
+</html>    

@@ -1,0 +1,19 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+button {
+  background-color: orange;
+  color: white;
+  width: 6.5em;
+  height: 4em;
+  border: 2px double black;
+  border-radius: 3px;
+}
+
+section {
+  text-align: center;
+  border: 3px double rebeccapurple;
+  margin: 2% 40%;
+}

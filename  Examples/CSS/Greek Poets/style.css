@@ -1,0 +1,51 @@
+:root {
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+*, 
+::before, 
+::after {
+    box-sizing: inherit;
+}
+ 
+@font-face {
+    font-family: "CavafyScript";
+    src: url("fonts/CavafyScriptTT.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CynthoSlabPro";
+    src: url("fonts/Mint Type - CynthoSlabPro-Regular.otf") format("opentype");
+}
+
+label {
+    
+   
+   * font-family: CynthoSlabPro; 
+    text-shadow: 2px 2px 2px coral; 
+}
+pre {
+    font-family: CavafyScript;
+    font-size: 1.3em;
+    }
+
+section {
+    margin-top: 1em;
+    background-color: blanchedalmond;
+    font-family: CynthoSlabPro;
+    line-height: 1.2em;
+    padding: 5%;
+}
+
+
+#Anagnostakis {
+    font-size: 20px;
+}
+ 
+footer ~ small {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+}
+

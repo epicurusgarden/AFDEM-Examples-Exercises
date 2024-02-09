@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     <title>Events</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+<header>
+  <ul>
+    <li class="menu"><a href="forms.html">Forms Demos</a></li>
+    <li class="menu"><a href="exercises.html">Lesson Exercises</a></li>
+  </ul>
+  
+</header>
+
+<article>
+  <!-- MULTIPLE EVENT HANDLERS -->
+  <input id="elem" type="button" value="Multiple Events"/>
+</article>
+
+
+
+<section>
+  <!-- BUBBLING -->
+    <button>Click me</button>
+</section>
+
+<hr />
+
+<section>
+  <!-- PREVENT DEFAULT -->
+  <p>Παρακαλώ κάντε click στο κουτάκι που λέει checkbox.</p>
+
+  <form>
+    <label for="checkbox-id">Checkbox:</label>
+    <input type="checkbox" id="checkbox-id"/>
+  </form>
+
+  <div id="output-box"></div>
+
+</section>
+
+
+
+<!-- Event Delegation -->
+<ul class="lili">
+  <li>Ebola</li>
+  <li>Sars</li>
+  <li>HIV</li>
+  <li>Covid-19</li>
+</ul>
+
+
+
+<script>
+//------------------------------
+//MULTIPLE EVENTS
+ 
+  function handler1() {
+    alert('Ευχαριστώ!');
+  };
+  
+  function handler2() {
+    alert('Και ξανά ευχαριστώ!');
+  }
+  
+  elem.onclick = () => alert("Τσίου");
+  elem.addEventListener("click", handler1); // Ευχαριστώ!
+  elem.addEventListener("click", handler2); // Και ξανά ευχαριστώ!
+
+
+
+//------------------------------
+//BUBBLING
+let div = document.querySelector('section');
+let btn = document.querySelector('button');
+
+div.addEventListener('click', () => alert('section is second'));
+btn.addEventListener('click', () => alert('button is first'));
+
+//------------------------------
+//PREVENT DEFAULT
+
+document.querySelector("#checkbox-id").addEventListener("click", function(event) {
+         document.getElementById("output-box").innerHTML += "Λυπούμαστε! Εχουμε βάλει <code>preventDefault()</code> και δεν μπορείτε να τσεκάρετε εδώ!<br>";
+         event.preventDefault();
+}, false);
+
+
+
+//------------------------------
+// Event Delegation
+let ul = document.querySelector('.lili');
+
+  ul.addEventListener('click', function (event) {
+    if (event.target.tagName === 'LI') {
+        alert(event.target.innerHTML);
+    }
+});
+
+
+</script> 
+
+    <script src="script.js"></script>
+  </body>
+</html>

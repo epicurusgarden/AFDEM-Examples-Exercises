@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>DEMO LIST</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+<body>  
+<!-- 
+<form>
+<select id="mySelect">
+  <option>Apple</option>
+  <option>Pear</option>
+  <option>Banana</option>
+  <option>Orange</option>
+</select>
+<br><br>
+
+<input type="button" onclick="disable()" id="disbtn" value="Disable list">
+<input type="button" onclick="enable()" id="enbtn" style="display:none;" value="Enable list"> -->
+
+<h1>outerHTML</h1>
+<button onclick="myFunction()">Change Header</button>
+
+<script>
+function myFunction() {
+var x = document.getElementsByTagName("h1")[0];
+x.outerHTML = "<h3>Change the entire h1 element and it's content!</h3>";
+}
+</script>
+<!-- 
+</form>
+
+<script>
+function disable() {
+  document.getElementById("mySelect").disabled=true;
+  document.getElementById("disbtn").style.display = "none";
+  document.getElementById("enbtn").style.display = "block";
+}
+
+function enable() {
+  document.getElementById("mySelect").disabled=false;
+  document.getElementById("disbtn").style.display = "block";
+  document.getElementById("enbtn").style.display = "none";
+}
+
+</script> -->
+
+</body>
+</html>

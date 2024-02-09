@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Exceptions Example</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <h2>Πληκτρολογήστε έναν αριθμό από το 50 έως το 100</h2>
+  <p>Παρακαλώ βάλτε τον αριθμό:</p>
+    <input id="input" type="text">
+    <button type="button" onclick="exceptFunc()"> Έλεγχος</button>
+  <p id="message"></p>
+
+<script>
+function exceptFunc() {
+  let message = document.getElementById("message");
+  message.innerHTML = "";   
+  let x = document.getElementById("input").value;
+  
+  try {
+    if(x == "")  throw "είναι Κενό";
+    if(isNaN(x)) throw "δεν είναι αριθμός";
+    if(x > 100)  throw "είναι πολύ μεγάλος";
+    if(x < 50)  throw "είναι πολύ μικρός";
+ }
+  catch(err) {
+    message.innerHTML = "Ο αριθμός που πληκτρολογήσατε " + err;
+  }
+
+  
+}
+</script>
+</body>
+</html>

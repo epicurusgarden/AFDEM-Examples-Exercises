@@ -1,0 +1,17 @@
+html {
+  color: whitesmoke;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+}
+.MyInfo {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+footer a {
+  color: moccasin;
+}

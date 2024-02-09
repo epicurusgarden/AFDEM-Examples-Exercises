@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <style>
+    #tux {
+      position: relative;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="tux" src="tux.png">
+
+
+  <script>
+    let tux = document.getElementById('tux');
+    
+    tux.onclick = function() {
+      // set && remember start time
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+      // count how much time passed from the start
+        let timePassed = Date.now() - start;
+
+      // as timePassed goes from 0 to 2000
+      // left gets values from 0px to 400px
+        tux.style.left = timePassed / 5 + 'px';
+        
+        //finish the animation after 2 seconds
+        if (timePassed > 2000) clearInterval(timer);
+          //delay of setInterval
+      }, 20);
+    }
+  </script>
+
+
+</body>
+
+</html>

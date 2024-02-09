@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <title>Country Info</title>
+  </head>
+  <body>
+    <!-- PRACTICE: 
+
+- Make sure the Country Info also works for "india"
+
+- Make sure we get the map even when the user presses enter in the input
+
+- Show something on the map section if the user searches for a country that does not exist
+
+- Add a loading indicator (Use the chrome Network speend simulator)
+
+-->
+
+    <div class="container mt-5">
+      <!-- JUMBOTRON -->
+      <section class="row">
+        <div class="jumbotron col-12 pb-4">
+          <h1 class="display-4 font-weight-bold">
+            <i class="fas fa-globe-americas" id="logo"></i> Country Info
+          </h1>
+          <p class="lead">
+            This is a Project to practice HTML, CSS, Bootstrap 4 and JavaScript
+            skills. It uses the Rest Countries API to get a country's data and
+            show its map.
+          </p>
+          <hr class="my-4" />
+
+          <form class="form-inline">
+            <div class="form-group mr-sm-3 mb-2">
+              <input
+                type="text"
+                class="form-control"
+                id="countryname"
+                placeholder="Country Name"
+              />
+            </div>
+
+            <button
+              id="getinfo"
+              type="button"
+              class="btn btn-primary mb-2 px-5"
+            >
+              <i class="fas fa-map-marker-alt"></i> Get Info
+            </button>
+          </form>
+          <div id="output" class="d-none alert alert-warning">OUTPUT</div>
+
+          <hr class="my-4" />
+          <span class="text-muted"
+            >Powered by
+            <a
+              href="https://restcountries.eu/"
+              class="text-info font-weight-bold"
+              >Rest Countries API</a
+            ></span
+          >
+        </div>
+      </section>
+
+      <!-- MAP / INFO -->
+      <section class="row mb-5">
+        <div
+          id="map"
+          class="rounded-left px-0 col-8 bg-secondary text-white"
+        ></div>
+        <div id="info" class="rounded-right col bg-dark text-white p-3"></div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Event στο σκοτεινό υπόγειο</title>
+       <link href="style.css" rel="stylesheet" type="text/css" />
+     <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>Το υπόγειο</h1>
+    <p id="story">Το ήξερα πως δεν έπρεπε να βρίσκομαι εκεί, στο σκοτάδι, σε αυτό το κρύο μέρος. Ήθελα όμως να βρω τον σκύλο μου που είχε κρυφτεί στο υπόγειο.</p>
+    
+    <button onclick="goDark()">Μπες στο κλίμα</button>
+
+    <div class="textEntry">Γράψε το όνομά σου εδώ, αν τολμάς: <input oninput="typeAndScream()" type="text" id="name" autocomplete="off"></div>
+
+    <button onclick="complainMessage()">Μην με πατήσεις σε παρακαλώ</button>
+    
+    <button onclick="finishTheStory()">Πες μου τι συνέβει στο τέλος!</button>
+    <audio id="audio" src="./assets/ouch.mp3" type="audio/mpeg"></audio>
+  </body>
+</html>
+

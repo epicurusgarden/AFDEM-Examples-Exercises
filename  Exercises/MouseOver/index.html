@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>MouseEnter && MouseLeave</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    
+      <h2>Image swap</h2>
+<p>Χρησιμοποιώντας την υπηρεσία picsum εναλλάξτε την παρακάτω εικόνα</p>
+
+
+<img id="image-swap" width="400" height="400" 
+src="https://picsum.photos/500/500" />
+
+<details>
+  <summary>Tip</summary>
+    <p>Επιλέξτε την εικόνα (με id="image-swap") και στο  'mouseenter' event 
+    αλλάξτε το src attribute [ELEMENT.getAttribute("ATTRIBUTE NAME")] να δείχνει την εικόνα "https://picsum.photos/200/300". Στη συνέχεια αποκαταστήστε την με το  'mouseleave'.</p>
+  <p>
+    Ξεκινήστε με: <br>
+    <code>const img = document.querySelector('#image-swap');</code>... 
+  </p>  
+</details>
+    <script src="script.js"></script>
+  </body>
+</html>

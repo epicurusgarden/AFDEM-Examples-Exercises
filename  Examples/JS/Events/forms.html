@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+     <title>Forms</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+<!-- preventDefault -->
+<h2>Form 1 will submit its content by default</h2>
+
+<form id="form1" action="https://repl.it/talk/learn">
+  <input type="text" placeholder="e.g. form validation" name="q">
+  <button>Submit</button>
+</form>
+
+<hr>
+<h2>Form 2 will not submit its content due to <strong>preventDefault()</strong></h2>
+
+<form id="form2" action="https://repl.it/talk/learn">
+  <input type="text" placeholder="e.g. form validation" name="q">
+  <button>Submit</button>
+</form>
+
+<hr>
+<h2>Form 3 will validate your email </h2>
+<form id="form3">
+    <label for = "txtmail">Please provide you email</label>
+    <input type="email" id = "txtmail" required/>
+    <input type="submit" id="txtmail" value="Submit" onClick="Javascript:checkEmail();"/> 
+    <button>Submit</button>
+</form>
+
+
+   <script src="script.js"></script>
+  </body>
+</html>

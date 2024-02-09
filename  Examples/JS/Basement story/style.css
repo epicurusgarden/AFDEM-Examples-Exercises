@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "AltSadistic";
+    src: url("./assets/Alt_Sadistic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "GhostStory";
+    src: url("./assets/AC-GhostStory.ttf") format("truetype");
+}
+
+body {
+  margin: 20px;
+  font-family: 'GhostStory', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+body.dark {
+  color: white;
+  background: black;
+}
+
+h1 {
+  font-family: 'AltSadistic', cursive;
+  font-weight: normal;
+  font-size: 60px;
+  margin: 5px;
+}
+
+button {  
+  display: block;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.textEntry {
+  margin-top: 12px;
+  margin-bottom: 15px;
+}

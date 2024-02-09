@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>My new Dom</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+<a id="ancor" href="largerInt.html">LargerInt Exercise</a><br>
+<a href="demo.html">DEMO</a>
+<a id="ancor" href="theClock.html">Clock demo</a>
+<a href="TuxAnimate.html">Tux Animation demo</a>
+
+    <p id="hola" style="color:red;" data-owner="Corto">Hola amigo!<span>Buenos dias!</span></p>
+    
+    <section id="sectionA">Η πρώτη ενότητα</section>
+    
+    <ul>
+        <li class="poet">Αναγνωστάκης</li>
+        <li class="poetess">Γώγου</li>
+        <li class="poetess">Δημουλά</li>
+        <li class="poet">Ελύτης</li>
+        <li class="poet">Καριωτάκης</li>
+        <li class="poet">Σαχτούρης</li>
+    </ul>
+
+<article id="latest" data-author="corto" data-timestamp="UTC-timestamp"  data-comment="comment">
+        <p>By Corto Maltese on <time >2020-10-23</time></p>
+        <p>Get along mister!</p>
+    </article>
+    <hr/>
+    <!-- <div>
+        <p>By Susan on <time>2020-11-8</time></p>
+        <p class="comment">I love Central Park.</p>
+    </div> -->
+
+<section class="focus">
+<input type="text" id="myText" value="Look here">
+<button type="button" onclick="getFocus()">Get focus</button>
+<button type="button" onclick="loseFocus()">Lose focus</button>
+</section>
+
+<section class="time-methods">
+<p>Time methods</p>
+<button class="btn"onclick="delayedAlert();">Εμφάνισε ένα  alert μετά από 2 δευτερόλεπτα</button>
+
+<button class="btn"onclick="clearAlert();">Ακύρωσε το alert πριν συμβεί</button>
+</section>
+    <script>
+//const list = document.querySelectorAll("li");
+// const lt = document.getElementsByTagName("div");
+// console.log(lt);
+// console.log(list); 
+//console.log(list[1]); //1st Node
+//        //Τι έχει μέσα;
+//console.log(list[1].textContent);
+// Αν υπάρχει id αυτή γίνεται global και μπορεί να προσεγγιστεί με το όνομά της
+// console.log(ancor.textContent);
+
+//------------------------------------
+
+// Σε τι οθόνη βλέπουμε;
+ 
+// const x = "Total Width: " + screen.width;
+// const y = "Total Height: " + screen.height
+// console.log(x, y) 
+
+//------------------------------------
+
+     //Μήπως να τα σβήσουμε όλα; 
+//document.body.innerHTML = '';
+// const list = document.querySelectorAll("li");
+
+//------------------------------------
+
+//ΑΛΛΑΞΕ ΤΟ ΧΡΩΜΑ/STYLE ΜΕ ΜΙΑ FUNCTION
+//      function changeli(li){
+//        console.log(li, typeof li);
+      // Find only the 2 first
+      // find by class
+  //    const classname = li.getAttribute("class");
+  //       console.log(classname);
+  //       if (classname == "poet") {
+  //        li.innerHTML = "<strong>" + li.textContent + "</strong>";
+  //        li.style.backgroundColor = "#3CB33C"; //RGB Hex
+  //      } else if (classname == "poetess") {
+  //          li.style.color = "red";
+  //      } else {
+  //          li.style.backgroundColor = "green";
+  //     }
+  //  }
+  //  changeli(list[0]);
+  //  changeli(list[1]);
+//    list.forEach(changeli);
+    
+//   //Χρώματα εναλλάξ στη λίστα
+//     function changeliOddEven(li) {
+//         for (let i = 0; i < li.length; i++) {
+//                 if (i % 2 == 0) {
+//               li[i].style.backgroundColor = "gray";
+//             } else {
+//              li[i].style.backgroundColor = "lightgray";
+//             }
+//       }
+//     }
+    
+//     // changeliOddEven(list);
+
+//------------------------------------
+// CHILD NODES vs children
+
+// const body = document.querySelector("body");
+// console.log(body.childNodes); 
+// // console.log(body.parentElement);
+// console.log(body.children);
+// console.log(body.children[1]);
+  
+//  const firstEl = body.children[0];
+//  console.log(firstEl.nextElementSibling);
+//  console.log(firstEl.textContent);
+// //  console.log(body.firstChild);
+// //  console.log(body.lastChild.textContent);
+
+//------------------------------------
+// getAttribute 
+
+// const hola = document.querySelector("#hola");
+// // console.log(hola);
+// // console.log(hola.getAttribute("style"));
+// // console.log(hola.hasAttribute("data-owner"));
+// let hasAttr = document.querySelector('li').hasAttributes('poet'); 
+// console.log(hasAttr);
+// const x = document.querySelector('p').hasAttributes();
+
+
+// const ulClass = document.querySelector('ul');
+// ulClass.setAttribute("class", "custom-ul");
+// console.log(ulClass.hasAttribute('class'));
+
+//------------------------------------
+//data Attributes
+
+// const latest = document.querySelector('#latest');
+// console.log(latest.dataset.author); 
+// console.log(latest.dataset.timestamp); 
+
+//------------------------------------
+//open Window
+
+// const openW = window.open();
+// openW
+// const openW = window.open('https://www.google.com', 'Google',  );
+// openW
+
+//------------------------------------
+//Add elements
+ 
+// let footer = document.createElement('footer');
+// footer.innerText = 'This is the END!';
+// document.body.appendChild(footer);  
+
+//------------------------------------
+//innerHTML vs textContent vs innerText
+
+// const innerH = document.querySelector('#sectionA');
+
+// innerH.innerHTML = `<b>Text</b> content`;
+// console.log(innerH.innerHTML);
+// innerH.textContent = `<b>Text</b> content`;
+// console.log(innerH.textContent);
+
+//------------------------------------
+//focus && blur
+
+// function getFocus() {
+//    document.getElementById("myText").focus();
+// }
+
+// function loseFocus() {
+//    document.getElementById("myText").blur();
+// }
+
+//------------------------------------
+//setTimeout
+<!-- 
+//EXAMPLE 1
+// let timeOut = setTimeout(function() {
+//   alert('Είναι ώρα για setTimeout!');
+// }, 4000)
+
+// clearTimeout(timeOut); 
+
+//EXAMPLE 2 -ΤΙΜΕIDs
+var timeoutID;
+
+function delayedAlert() {
+  timeoutID = window.setTimeout(window.alert, 2*1000, 'Αυτό άργησε 2 δευτερόλεπτα!');
+}
+
+
+function clearAlert() {
+  window.clearTimeout(timeoutID);
+}
+
+
+</script>
+
+    
+</body>
+</html>
+
+    <script src="script.js"></script>
+  </body>
+</html>

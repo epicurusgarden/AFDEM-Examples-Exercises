@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Q&A</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <h2>Objects</h2>
+  <p>Q: Adding to Set a double value throw error? <br>
+  Answer: No. JS ignores the dublicate value 
+<details>
+  <summary>Example</summary>
+<pre>
+   let m = new Set();
+   m.add(2);
+   m.add(3);
+   m.add(2);
+   m.add(3);
+   m.add(32);
+   console.log(m);
+</pre>
+</details>
+<p> Q: Could a Class have a Map as property?<br>
+Answer: Classes are templates for creating objects, not objects per se. When you create an Object throught class you can set a Map.  
+<details>
+  <summary>Example</summary>
+<pre>
+class GreekPoet {
+   constructor(firstName, lastName, dateOfBirth, dateOfDeath, famousPoems) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.dateOfBirth = dateOfBirth;
+      this.dateOfDeath = dateOfDeath;
+      this.famousPoems = famousPoems;
+
+      this.smallBio = function(){
+          return `O ${this.firstName} ${this.lastName} γεννήθηκε το ${this.dateOfBirth} και πέθανε το ${this.dateOfDeath}`;
+      }
+   }
+}
+
+const Elytis = new GreekPoet('Οδυσσέας', 'Ελύτης', 1911, 1996, new Map());
+
+Elytis.famousPoems.set([(1, "Άσμα ηρωικό και πένθιμο για τον χαμένο ανθυπολοχαγό της Αλβανίας")], [(2, "Το Άξιον Εστί")]);
+
+console.log(Elytis)
+
+console.log(Elytis.smallBio())
+</pre>
+</details>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>

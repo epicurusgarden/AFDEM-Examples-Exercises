@@ -1,0 +1,19 @@
+.container { display: grid;
+    grid-template-rows: 200px auto 100px;
+    grid-template-columns: 33% auto;
+    grid-template-areas: "header header" "sidebar content" "footer footer";
+    }
+    .container > div { padding: 10px; margin: 10px;
+    background-color: rgb(220, 220, 220);
+    }
+    .header { grid-area: header; }
+    .sidebar { grid-area: sidebar; }
+    .footer { grid-area: footer; }
+    .content { grid-area: content; }
+    
+ @media screen and (max-width: 699px) {
+    .container { display: grid;
+    grid-template-rows: 200px auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "header" "sidebar" "content" "footer";
+  }

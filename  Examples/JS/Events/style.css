@@ -1,0 +1,49 @@
+body, input, button {
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+}
+section, article {
+  margin: 1.2em 0;
+}
+
+strong {
+  color: coral;
+}
+
+header{
+  margin: 1.2em;
+  border: double 3px #2D2CE6;
+  padding: .75em;
+  font: 1.2em Roboto;
+  
+}
+.menu {
+  list-style-type: numbers;
+}
+
+form {
+  padding: .25em;
+}
+#form3 {
+  margin-top: 1.5em;
+}
+
+input:invalid {
+  border:5px double #2D2CE6;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right,white, #2CE6DD);
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+#scroll {
+  margin-top: .75em;
+  border: 2px double green;
+  width: 250px;
+  height: 120px;
+  overflow: scroll;
+}

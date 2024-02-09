@@ -1,0 +1,15 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  background: #6cecd7;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+details {
+  margin-top: .5em;
+}
+

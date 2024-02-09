@@ -1,0 +1,12 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+#map,
+#info {
+  height: 250px;
+}
+
+#info {
+  text-align: center;
+  border: 3px double grey;
+}

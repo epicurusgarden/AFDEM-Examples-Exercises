@@ -1,0 +1,16 @@
+body {
+  padding: 40px;
+}
+
+select {
+  width: 15vw;
+  height: 15vh;
+}
+
+#btn {
+    color: black;
+    font-size: 14px;
+    border: 1px solid crimson;
+    padding: 8px;
+  }
+}

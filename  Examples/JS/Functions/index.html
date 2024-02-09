@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Functions Examples</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+  <p>Demonstration of Javascript Closure</p>
+<button type="button" onclick="testClosure()">Check Your Message</button>
+<p id="demoOfClosure"></p>
+<a href="Exceptions.html">DEMO TRY/CATCH</a>
+
+<script>
+
+function displayMessage (param1, param2) {
+   const outerVariable = "Hi, ";
+   function prepareGreetings () {
+    return `${outerVariable} ${param1} ${param2}`;
+  }
+return prepareGreetings ();
+}
+
+function testClosure() {
+  const message = displayMessage ("Good", "Morning"); 
+  document.getElementById("demoOfClosure").innerHTML = message;
+}
+</script>
+</body>
+</html>
+
+
+   <script src="script.js"></script>
+  </body>
+</html>
